@@ -2,7 +2,7 @@ package lec02
 
 fun main() {
     val person: Person = Person("")
-    println(startWithA1(person.name))
+    println(person.name?.let { startWithA1(it) })
 }
 
 fun startWithA1(str: String): Boolean {
