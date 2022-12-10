@@ -1,5 +1,6 @@
 package lec02;
 
+
 import org.jetbrains.annotations.Nullable;
 
 public class Person {
