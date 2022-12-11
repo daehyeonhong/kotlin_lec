@@ -6,7 +6,8 @@ fun main() {
 }
 
 fun objectObjIsPerson(obj: Any) {
-    if (obj is Person) {
-        println(obj.age)
+    if (obj !is Person) {
+//        println(obj.age)
+        println("obj is not Person")
     }
 }
