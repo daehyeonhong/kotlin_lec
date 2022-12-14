@@ -9,5 +9,6 @@ fun main() {
         GHI
         ${name}
     """.trimIndent()
-    println(string)
+    println(string[0])
+    println(string[1])
 }
