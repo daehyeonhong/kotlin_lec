@@ -27,4 +27,15 @@ public class JavaMoney implements Comparable<JavaMoney> {
     public int hashCode() {
         return Objects.hash(amount);
     }
+
+    public JavaMoney plus(final JavaMoney other) {
+        return new JavaMoney(this.amount + other.amount);
+    }
+
+    @Override
+    public String toString() {
+        return "JavaMoney{" +
+                "amount=" + amount +
+                '}';
+    }
 }
