@@ -3,6 +3,9 @@ package Lec05
 fun main() {
     println(getPassOrFail(20))
     getGrade(20)
+    getGradeWithSwitch(80)
+    startWithA("DS")
+
     validateScore(-1)
 }
 
@@ -26,5 +29,19 @@ fun getGradeWithSwitch(score: Int): String {
         in 80..89 -> "B"
         in 70..79 -> "C"
         else -> "D"
+    }
+}
+
+fun startWithA(any: Any): Boolean {
+    return when (any) {
+        is String -> any.startsWith("A")
+        else -> false
+    }
+}
+
+fun judgeNumber(number: Int): Unit {
+    when (number) {
+        1, 0, -1 -> println("어디서 많이 본 숫자입니다.")
+        else -> println("1,0,-1이 아닙니다.")
     }
 }
