@@ -1,4 +1,4 @@
-package Lec05
+package lec05
 
 fun main() {
     println(getPassOrFail(20))
