@@ -1,7 +1,8 @@
 package lec06
 
 fun main() {
-    for (i in 3 downTo 1) {
-        println(i)
+    var i = 1
+    while (i <= 3) {
+        println(i++)
     }
 }
