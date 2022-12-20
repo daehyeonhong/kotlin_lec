@@ -2,7 +2,7 @@ package lec07
 
 fun main() {
     parseIntOrThrow("125a")
-    println(KotlinFileReader().readFile())
+    println(KotlinFileReader().readFile("./a.txt"))
 }
 
 fun parseIntOrThrow(string: String): Int {

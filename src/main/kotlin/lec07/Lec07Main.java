@@ -5,6 +5,6 @@ import java.io.IOException;
 public class Lec07Main {
     public static void main(String[] args) throws IOException {
         final JavaFilePrinter javaFilePrinter = new JavaFilePrinter();
-        javaFilePrinter.readFile();
+        javaFilePrinter.readFile("./a.txt");
     }
 }
