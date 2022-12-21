@@ -2,7 +2,7 @@ package lec08
 
 fun main() {
     println(max(1, 2))
-    repeat("Hello, World!", 3, true)
+    repeat("Hello, World!", useNewLine = false)
 }
 
 fun max(a: Int, b: Int) = if (a > b) a else b
