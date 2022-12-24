@@ -16,12 +16,9 @@ fun main() {
 }
 
 class Person constructor(// primary constructor
-    val name: String,
+    name: String,
     var age: Int
 ) {
-
-    fun getUppercaseName() = this.name.uppercase()
-
 
     init {
         if (age <= 0) {
@@ -29,6 +26,16 @@ class Person constructor(// primary constructor
         }
         println("초기화 블록")
     }
+
+    var name = name
+        set(value) {
+            field = value.uppercase()
+        }
+
+    fun getUppercaseName() = this.name.uppercase()
+
+    val uppercaseName: String
+        get() = this.name.uppercase()
 
     constructor(name: String) : this(name, 1)// secondary constructor
     {
