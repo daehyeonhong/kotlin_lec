@@ -1,14 +1,14 @@
 package lec09
 
 fun main() {
-//    val person1 = Person("qwe1", 123)
-//    println(person1.name + ", " + person1.age)
-//    person1.age = 20
-//    println(person1.name + ", " + person1.age)
-//    val person2 = Person("qwe2")
-//    println(person2.name + ", " + person2.age)
-//    person2.age = 20
-//    println(person2.name + ", " + person2.age)
+    val person1 = Person("qwe1", 123)
+    println(person1.name + ", " + person1.age)
+    person1.age = 20
+    println(person1.name + ", " + person1.age)
+    val person2 = Person("qwe2")
+    println(person2.name + ", " + person2.age)
+    person2.age = 20
+    println(person2.name + ", " + person2.age)
     val person3 = Person()
     println(person3.name + ", " + person3.age)
     person3.age = 20
@@ -16,9 +16,13 @@ fun main() {
 }
 
 class Person constructor(// primary constructor
-    val name: String,
+    name: String,
     var age: Int
 ) {
+
+    val name = name
+        get() = field.uppercase()
+
     init {
         if (age <= 0) {
             throw IllegalArgumentException("나이는 ${age} 일 수 없습니다.")
@@ -35,4 +39,11 @@ class Person constructor(// primary constructor
     {
         println("두번째 부생성자")
     }
+
+    fun isAdult(): Boolean {
+        return this.age >= 20
+    }
+
+    val isAdult: Boolean
+        get() = this.age >= 20
 }
