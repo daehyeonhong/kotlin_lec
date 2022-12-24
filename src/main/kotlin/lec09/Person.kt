@@ -16,12 +16,12 @@ fun main() {
 }
 
 class Person constructor(// primary constructor
-    name: String,
+    val name: String,
     var age: Int
 ) {
 
-    val name = name
-        get() = field.uppercase()
+    fun getUppercaseName() = this.name.uppercase()
+
 
     init {
         if (age <= 0) {
@@ -40,9 +40,7 @@ class Person constructor(// primary constructor
         println("두번째 부생성자")
     }
 
-    fun isAdult(): Boolean {
-        return this.age >= 20
-    }
+    fun isAdult() = this.age >= 20
 
     val isAdult: Boolean
         get() = this.age >= 20
