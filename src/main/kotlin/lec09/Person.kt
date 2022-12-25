@@ -27,12 +27,11 @@ class Person constructor(// primary constructor
         println("초기화 블록")
     }
 
-    var name = name
+    var name: String = name
         set(value) {
             field = value.uppercase()
         }
 
-    fun getUppercaseName() = this.name.uppercase()
 
     val uppercaseName: String
         get() = this.name.uppercase()
@@ -47,7 +46,6 @@ class Person constructor(// primary constructor
         println("두번째 부생성자")
     }
 
-    fun isAdult() = this.age >= 20
 
     val isAdult: Boolean
         get() = this.age >= 20
