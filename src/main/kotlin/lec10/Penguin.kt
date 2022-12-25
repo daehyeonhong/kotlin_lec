@@ -15,4 +15,7 @@ class Penguin(
         super<SwimAble>.act()
         super<FlyAble>.act()
     }
+
+    override val swimAbility: Int
+        get() = 3
 }
