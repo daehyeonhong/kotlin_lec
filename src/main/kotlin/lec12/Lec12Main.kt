@@ -2,6 +2,19 @@ package lec12
 
 fun main() {
     println(Person.newBaby("감자"))
+    println(Singleton.a)
+    Singleton.a += 10
+    println(Singleton.a)
+    moveSomething(object : Movable {
+        override fun move() {
+            println("무브 무브")
+        }
+
+        override fun fly() {
+            println("날다 날다")
+        }
+
+    })
 }
 
 class Person private constructor(
@@ -24,4 +37,13 @@ class Person private constructor(
             println("나는 Person Class의 동행객체 Factory입니다.")
         }
     }
+}
+
+object Singleton {
+    var a: Int = 0
+}
+
+private fun moveSomething(movable: Movable) {
+    movable.move()
+    movable.fly()
 }
