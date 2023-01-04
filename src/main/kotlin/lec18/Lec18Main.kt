@@ -19,6 +19,8 @@ fun main() {
 
     println(filterFruits(fruits, isApple))
     println(filterFruits(fruits, isApple2))
+    filterFruits(fruits) { it.name == "사과" }
+    filterFruits(fruits, { it.name == "사과" })
 }
 
 private fun filterFruits(
