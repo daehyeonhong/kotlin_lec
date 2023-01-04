@@ -13,7 +13,9 @@ fun main() {
     train.isExpensive()
     srt1.isExpensive()
     srt2.isExpensive()
-    3 add 2
+    3 add 2 // infix function
+    createPerson("gam", "ja")
+    createPersonWithInline("gogum", "s")
 }
 
 fun String.lasChar(): Char {
@@ -44,4 +46,20 @@ fun Srt.isExpensive(): Boolean {
 
 infix fun Int.add(other: Int): Int {
     return this + other
+}
+
+fun createPerson(firstName: String, lastName: String): JavaPerson {
+    if (firstName.isEmpty()) throw IllegalArgumentException("firstName은 비어있을 수 없습니다! 현재 값 : ${firstName}")
+    if (lastName.isEmpty()) throw IllegalArgumentException("lastName은 비어있을 수 없습니다! 현재 값 : ${lastName}")
+    return JavaPerson(firstName + lastName, 1)
+}
+
+fun createPersonWithInline(firstName: String, lastName: String): JavaPerson {
+    fun validateName(name: String, fieldName: String) {
+        if (name.isEmpty())
+            throw java.lang.IllegalArgumentException("${fieldName}은 비어있을 수 없습니다! 현재 값 :${name}")
+    }
+    validateName(firstName, "firstName")
+    validateName(lastName, "lastName")
+    return JavaPerson(firstName + lastName, 1)
 }
