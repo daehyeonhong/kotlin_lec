@@ -13,6 +13,7 @@ fun main() {
     train.isExpensive()
     srt1.isExpensive()
     srt2.isExpensive()
+    3 add 2
 }
 
 fun String.lasChar(): Char {
@@ -39,4 +40,8 @@ class Srt : Train("SRT", 40_000)
 fun Srt.isExpensive(): Boolean {
     println("Srt의 확장 함수")
     return this.price >= 10_000
+}
+
+infix fun Int.add(other: Int): Int {
+    return this + other
 }
