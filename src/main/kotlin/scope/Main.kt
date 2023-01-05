@@ -7,7 +7,7 @@ fun main() {
 }
 
 fun printPerson(person: Person?) {
-    if (person != null) {
+    person?.let {
         println(person.name)
         println(person.age)
     }
