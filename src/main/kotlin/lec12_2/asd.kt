@@ -1,4 +1,5 @@
 package lec12_2
 
-class asd {
+fun main() {
+    Person.newBaby("asdasd")
 }
