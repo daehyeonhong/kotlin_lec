@@ -23,6 +23,5 @@ fun startWithA2(str: String?): Boolean? {
 }
 
 fun startWithA3(str: String?): Boolean {
-    if (str == null) return false
-    return str.startsWith("A")
+    return str?.startsWith("A") ?: false
 }
