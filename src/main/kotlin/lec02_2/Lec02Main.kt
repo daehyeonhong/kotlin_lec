@@ -6,6 +6,12 @@ fun main() {
     println(startWithA1("APPLE"))
     println(startWithA2("APPLE"))
     println(startWithA3("APPLE"))
+
+    var str: String? = "ABC"
+//    println(str.length) -> str에 null이 있을 수 있기 때문에 오류
+    println(str?.length)
+    str = null
+    println(str?.length)
 }
 
 fun startWithA1(str: String?): Boolean {
