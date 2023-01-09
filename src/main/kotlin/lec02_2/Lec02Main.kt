@@ -11,7 +11,7 @@ fun main() {
 //    println(str.length) -> str에 null이 있을 수 있기 때문에 오류
     println(str?.length)
     str = null
-    println(str?.length)
+    println(str?.length ?: 0)// -> elvis exp
 }
 
 fun startWithA1(str: String?): Boolean {
